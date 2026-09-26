@@ -920,7 +920,7 @@ draw=function(time){phase5BaseDraw(time);drawMapAtmospherePhase5(time)};
 
 // Phase 10 placement preview: selected weapon range + legal/blocked tile.
 const phase10Draw=draw;draw=function(time){phase10Draw(time);if(!previewCell||selectedTower>=0||ended)return;let {x,y}=previewCell,cx=(x+.5)*S,cy=(y+.5)*S,d=defs[selectedKind],blocked=reserved.has(y*COLS+x)||towers.some(t=>t.x===x&&t.y===y),afford=credits>=d.cost,ok=!blocked&&afford;ctx.save();ctx.globalAlpha=.13;ctx.fillStyle=ok?d.color:'#ff6969';ctx.beginPath();ctx.arc(cx,cy,d.range*(1+research.sensors*.05),0,Math.PI*2);ctx.fill();ctx.globalAlpha=.9;ctx.strokeStyle=ok?d.color:'#ff6969';ctx.lineWidth=3;ctx.strokeRect(x*S+4,y*S+4,S-8,S-8);ctx.globalAlpha=.95;ctx.fillStyle='#07131ddd';ctx.fillRect(cx-47,cy-13,94,26);ctx.fillStyle=ok?'#eafff8':'#ffd1c9';ctx.font='900 10px system-ui';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(blocked?'BLOCKED':!afford?`NEED ${d.cost-credits}`:`${d.name} · ${d.cost}`,cx,cy);ctx.restore()};
-function frame(now){let raw=(now-last)/1000;let dt=Math.max(0,Math.min(.04,Number.isFinite(raw)?raw:0));last=now;if(active&&!paused)tick(dt*(fast?2:1));if(!paused)updateEffects(dt*(fast?2:1));draw(now);requestAnimationFrame(frame)}
+function frame(now){let raw=(now-last)/1000;let dt=Math.max(0,Math.min(.04,Number.isFinite(raw)?raw:0));last=now;if((active||intermission>0)&&!paused)tick(dt*(fast?2:1));if(!paused)updateEffects(dt*(fast?2:1));draw(now);requestAnimationFrame(frame)}
 loadResearch();loadCampaign();let savedMap=0;try{savedMap=Number(localStorage.getItem(MAP_KEY))}catch{}if(Number.isInteger(savedMap)&&savedMap>=0&&savedMap<maps.length)setMap(savedMap);ui.mapSelect.value=String(mapId);resetState();let loaded=load();if(loaded&&ended)setOverlay('Core breached',`You reached wave ${wave}. Your best effort destroyed ${kills} enemies.`, 'Restart game',restart);else if(!seenIntro){seenIntro=true;ui.overlay.hidden=true;notify('DEFEND THE CORE · Choose a weapon, tap an open grid tile, then start wave 1.');save();}else ui.overlay.hidden=true;paused=false;refresh();requestAnimationFrame(frame);
 })();
 </script>
@@ -939,17 +939,7 @@ loadResearch();loadCampaign();let savedMap=0;try{savedMap=Number(localStorage.ge
  setInterval(updateBoss,300);updateBoss();
 })();
 </script>
-<script id="auto-wave-no-button-press">
-(()=>{
- const start=document.getElementById('start');
- if(!start)return;
- const sync=()=>{
-   if(typeof active==='undefined'||typeof intermission==='undefined'||typeof wave==='undefined')return;
-   if(!active && intermission>0){ start.textContent=`Auto launch in ${Math.ceil(intermission)}s`; start.disabled=true; }
- };
- setInterval(sync,250); sync();
-})();
-</script>
+
 </body></html>
 <style id="cleanup-phase1">
 /* CLEANUP PHASE 1 — interface only. Gameplay remains unchanged. */

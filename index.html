@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#07131b"><title>Tower Defense — Towers Part 4 of 4 Complete</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#07131b"><title>Tower Defense — Heavy Weapons Upgrade 4 Star Fix</title>
 <style>
 :root{color-scheme:dark;--ink:#dceef1;--muted:#91aab2;--line:#244450;--aqua:#49e1cb;--gold:#f4c86d;--bg:#06121a}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#183b48 0,#091a24 42%,#050d13 100%);color:var(--ink);font:15px/1.4 system-ui,-apple-system,Segoe UI,sans-serif;min-height:100svh}.shell{max-width:1050px;margin:auto;padding:10px 12px 28px}header{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:9px}.brand{font-size:19px;font-weight:900;letter-spacing:.08em;color:#e7faf5;text-transform:uppercase}.brand small{display:block;font-size:10px;letter-spacing:.22em;color:var(--aqua);font-weight:700}.tiny{border:1px solid var(--line);background:#0e2631;color:#c9e1e5;border-radius:10px;padding:8px 10px;font:inherit;cursor:pointer}.campaignbar{display:flex;align-items:center;gap:8px;margin:0 0 7px;padding:5px 8px;min-height:36px;border:1px solid #3f635e;background:#122c31;border-radius:9px;font-size:12px;color:#b9ded5}.campaignbar strong{color:#ffe1a1}.campaignbar .tiny{margin-left:auto;padding:5px 8px;font-size:12px}.mapbar{display:flex;align-items:center;gap:8px;margin:0 0 8px;background:#102832;border:1px solid #29505b;border-radius:10px;padding:5px 9px;color:#a9cbcb;font-size:12px}.mapbar select{flex:1;min-width:0;background:#153842;color:#f0f7ed;border:1px solid #4b787d;border-radius:7px;padding:6px 8px;font:700 13px system-ui}.mapbar span{font-size:11px;color:#95b5b9}.hud{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:8px}.meter{background:#112833;border:1px solid #29505b;border-radius:11px;padding:7px 9px;min-width:0}.meter span{font-size:10px;text-transform:uppercase;letter-spacing:.11em;color:#94b4bc;display:block}.meter b{font-size:21px;font-variant-numeric:tabular-nums;line-height:1.2}.meter:first-child b{color:var(--gold)}.meter:nth-child(2) b{color:#75edcd}.game{position:relative;border:1px solid #397385;border-radius:14px;padding:5px;background:#0b1f29;box-shadow:0 15px 50px #0008,0 0 30px #1a857431}.board{display:block;width:100%;height:auto;aspect-ratio:3/2;background:#0a1d25;border-radius:10px;touch-action:manipulation;cursor:crosshair}.overlay{position:absolute;inset:6px;display:flex;align-items:center;justify-content:center;background:#04121bba;border-radius:10px;backdrop-filter:blur(3px);padding:14px;z-index:2}.overlay[hidden]{display:none}.modal{max-width:480px;text-align:center;padding:20px;background:#102c38;border:1px solid #5fb6af;border-radius:16px;box-shadow:0 12px 40px #000a}.modal h1{font-size:25px;margin:0 0 8px}.modal p{color:#c6dfe1;margin:8px 0 18px}.buttons{display:flex;flex-wrap:wrap;gap:7px;justify-content:center}.controls{display:flex;gap:7px;margin:9px 0;align-items:stretch}.abilitybar{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:0 0 8px}.abilitybar .button{min-height:43px}.abilitybar .button:disabled{opacity:.48}.charge{color:#f4c86d;font-weight:800}.button{font:700 14px system-ui;color:#e8f7f5;cursor:pointer;border:1px solid #38616e;border-radius:10px;background:#173442;padding:10px 12px;min-height:45px}.button:disabled{opacity:.45;cursor:not-allowed}.button.primary{background:linear-gradient(135deg,#116d67,#0e555d);border-color:#62ddc8;flex:1}.button.danger{border-color:#9d6666;color:#ffd5ce}.button:focus-visible,.tiny:focus-visible{outline:2px solid #f6d47e;outline-offset:2px}.status{font-size:13px;min-height:21px;color:#b6d5d6;margin:0 1px 8px}.panel{border:1px solid var(--line);background:#0b202a;border-radius:13px;padding:11px}.panel h2{font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:#aad7d7;margin:0 0 9px}.shop{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.tower{border:1px solid #335667;background:#112e39;color:#dbf3f1;border-radius:11px;min-height:75px;text-align:left;padding:9px;cursor:pointer;font:inherit;display:flex;flex-direction:column;gap:2px}.tower.selected{border:2px solid #61e5d0;background:#17494c;padding:8px;box-shadow:inset 0 0 18px #3caea13a}.tower strong{font-size:14px}.tower small{font-size:11px;color:#abc7ca}.tower .cost{color:var(--gold);font-weight:800}.tower:disabled{opacity:.6}.detail{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:9px;min-height:39px}.detail .readout{flex:1;min-width:160px;color:#bcd6d8;font-size:13px}.hint{font-size:12px;color:#9cb6bd;margin:9px 1px 0}.help{border:1px solid #34545b;background:#102b33;border-radius:10px;padding:10px;color:#b8d0d0;font-size:12px;margin-top:9px}#toast{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);background:#123b42f0;border:1px solid #76d7c6;border-radius:8px;padding:8px 12px;color:#f0ffff;white-space:nowrap;max-width:95%;overflow:hidden;text-overflow:ellipsis;pointer-events:none;opacity:0;transition:opacity .18s;z-index:3}#toast.show{opacity:1}@media(max-width:560px){.shell{padding:7px 7px 22px}.brand{font-size:16px}.hud{gap:4px}.meter{padding:5px 6px}.meter span{font-size:9px}.meter b{font-size:18px}.controls .button{padding:8px 7px;font-size:12px;min-height:43px}.tower{padding:7px 5px;min-height:78px}.tower.selected{padding:6px 4px}.tower strong{font-size:12px}.tower small{font-size:10px}.modal{padding:16px}}
 
@@ -1003,7 +1003,13 @@ function drawTowerCartoon2(t,time,selected){
  ctx.fillStyle='#c7cdd5';for(const q of [[-16,11],[16,11],[-14,-7],[14,-7]]){ctx.beginPath();ctx.arc(q[0],q[1],2.2,0,7);ctx.fill()}
 
  // Existing working rotating upper turret.
- ctx.save();ctx.rotate(t.cartoonAim);ctx.translate(-kick,0);ctx.strokeStyle='#09080e';ctx.lineWidth=4;
+ ctx.save();ctx.rotate(t.cartoonAim);ctx.translate(-kick,0);
+ // HEAVY WEAPONS UPGRADE 1 — larger cartoon upper assembly.
+ const weaponScale=(t.level>=4?1.24:(t.level>=3?1.18:(t.level>=2?1.12:1.08)));
+ const mechSpin=time*.0045+(t.x+t.y)*.4;
+ const mechPump=Math.sin(time*.009+t.x*.8)*2.5;
+ ctx.scale(weaponScale,weaponScale);
+ctx.strokeStyle='#09080e';ctx.lineWidth=4;
  // PART 2/4: visible swivel machinery — all follows existing cartoonAim.
  ctx.fillStyle='#17151e';ctx.beginPath();ctx.arc(0,0,17,0,Math.PI*2);ctx.fill();ctx.stroke();
  ctx.strokeStyle='#8e98a5';ctx.lineWidth=2.2;
@@ -1017,6 +1023,44 @@ function drawTowerCartoon2(t,time,selected){
  ctx.beginPath();ctx.moveTo(-8,8);ctx.quadraticCurveTo(-15,15,-22,7);ctx.stroke();ctx.globalAlpha=1;
  ctx.fillStyle='#292b3b';ctx.beginPath();ctx.arc(0,0,13,0,7);ctx.fill();ctx.stroke();
  ctx.fillStyle=d.color;ctx.globalAlpha=.7;ctx.beginPath();ctx.arc(0,0,6+pulse,0,7);ctx.fill();ctx.globalAlpha=1;
+ // Heavy rotating shoulder housing.
+ ctx.fillStyle='#464c5a';ctx.strokeStyle='#09080e';ctx.lineWidth=3;
+ ctx.beginPath();ctx.roundRect(-8,-12,19,7,4);ctx.fill();ctx.stroke();
+ ctx.beginPath();ctx.roundRect(-8,5,19,7,4);ctx.fill();ctx.stroke();
+ // Visible pivot pin.
+ ctx.fillStyle='#d6dbe0';ctx.beginPath();ctx.arc(-2,0,3,0,Math.PI*2);ctx.fill();ctx.stroke();
+ // Rear ammunition / reactor pack.
+ ctx.fillStyle='#303541';ctx.beginPath();ctx.roundRect(-21,-9,12,18,5);ctx.fill();ctx.stroke();
+ ctx.fillStyle=d.color;ctx.globalAlpha=.55+.25*pulse;
+ ctx.beginPath();ctx.roundRect(-18,-5,5,10,2);ctx.fill();ctx.globalAlpha=1;
+ // HEAVY WEAPONS UPGRADE 2 — moving gears, pistons and feed hardware.
+ for(const gy of [-9,9]){
+   ctx.save();ctx.translate(-9,gy);ctx.rotate(mechSpin*(gy<0?1:-1));
+   ctx.fillStyle='#89919d';ctx.strokeStyle='#09080e';ctx.lineWidth=2;
+   ctx.beginPath();
+   for(let z=0;z<12;z++){
+     let a=z*Math.PI/6,r=z%2?5:7;
+     let px=Math.cos(a)*r,py=Math.sin(a)*r;
+     if(z===0)ctx.moveTo(px,py);else ctx.lineTo(px,py);
+   }
+   ctx.closePath();ctx.fill();ctx.stroke();
+   ctx.fillStyle='#262a33';ctx.beginPath();ctx.arc(0,0,2.5,0,Math.PI*2);ctx.fill();
+   ctx.restore();
+ }
+ // Pumping hydraulic rods.
+ ctx.strokeStyle='#d1d7dc';ctx.lineWidth=3;
+ ctx.beginPath();ctx.moveTo(-2,-11);ctx.lineTo(8+mechPump,-15);ctx.stroke();
+ ctx.beginPath();ctx.moveTo(-2,11);ctx.lineTo(8-mechPump,15);ctx.stroke();
+ // Ammunition / energy feed dots traveling toward the barrel.
+ ctx.fillStyle=d.color;
+ for(let z=0;z<3;z++){
+   let feed=(time*.025+z*9)%27;
+   ctx.globalAlpha=.35+.18*z;
+   ctx.beginPath();ctx.arc(4+feed,-6,1.8,0,Math.PI*2);ctx.fill();
+ }
+ ctx.globalAlpha=1;
+
+
  if(t.kind==='mortar'){
   ctx.fillStyle='#69717c';ctx.beginPath();ctx.roundRect(-1,-13,28,26,8);ctx.fill();ctx.stroke();ctx.fillStyle='#16141c';ctx.beginPath();ctx.ellipse(27,0,8,12,0,0,7);ctx.fill();ctx.stroke();
  }else if(t.kind==='missile'){
@@ -1042,8 +1086,98 @@ function drawTowerCartoon2(t,time,selected){
  ctx.beginPath();ctx.moveTo(-3,-12);ctx.lineTo(8,-18);ctx.lineTo(10,-10);ctx.closePath();ctx.fill();ctx.stroke();
  ctx.beginPath();ctx.moveTo(-3,12);ctx.lineTo(8,18);ctx.lineTo(10,10);ctx.closePath();ctx.fill();ctx.stroke();
  
+ 
+ // Upgrade levels make the weapon visibly more intimidating.
+ if((Number(t.level)||1)>=3 && !['mortar','tesla','emp','gravity','nova','drone'].includes(t.kind)){
+   ctx.strokeStyle='#09080e';ctx.lineWidth=5;
+   ctx.beginPath();ctx.moveTo(10,-8);ctx.lineTo(39,-8);ctx.stroke();
+   ctx.strokeStyle=d.color;ctx.lineWidth=2.5;
+   ctx.beginPath();ctx.moveTo(13,-8);ctx.lineTo(41,-8);ctx.stroke();
+ }
+ if((Number(t.level)||1)>=4 && (t.kind==='missile'||t.kind==='cryo')){
+   ctx.fillStyle=d.color;ctx.strokeStyle='#09080e';ctx.lineWidth=3;
+   ctx.beginPath();ctx.roundRect(9,13,27,7,3);ctx.fill();ctx.stroke();
+ }
+
+ 
+ // Higher-level idle mechanical movement.
+ if((Number(t.level)||1)>=3){
+   ctx.strokeStyle='#bfc7cf';ctx.lineWidth=2.5;
+   const antenna=Math.sin(time*.006+t.y)*4;
+   ctx.beginPath();ctx.moveTo(-13,-10);ctx.lineTo(-18,-20+antenna);ctx.stroke();
+   ctx.fillStyle=d.color;ctx.beginPath();ctx.arc(-18,-20+antenna,2.5,0,Math.PI*2);ctx.fill();
+ }
+
+ 
+ // HEAVY WEAPONS UPGRADE 3 — weapon-family identity pass.
+ // These are decorative parts attached to the existing rotating assembly.
+ const lvl3=Math.max(1,Number(t.level)||1);
+
+ if(t.kind==='mortar'){
+   // Thick breech, recoil rails, shell drum.
+   ctx.fillStyle='#4b505b';ctx.strokeStyle='#09080e';ctx.lineWidth=3;
+   ctx.beginPath();ctx.roundRect(-15,-15,13,30,5);ctx.fill();ctx.stroke();
+   ctx.fillStyle='#8b939d';ctx.beginPath();ctx.arc(-13,0,8,0,Math.PI*2);ctx.fill();ctx.stroke();
+   ctx.fillStyle=d.color;
+   for(let z=0;z<4;z++){let aa=z*Math.PI/2+mechSpin;ctx.beginPath();ctx.arc(-13+Math.cos(aa)*5,Math.sin(aa)*5,1.8,0,Math.PI*2);ctx.fill();}
+ }else if(t.kind==='missile'){
+   // Visible missile noses and rack braces.
+   ctx.strokeStyle='#b9c1ca';ctx.lineWidth=3;
+   ctx.beginPath();ctx.moveTo(4,-15);ctx.lineTo(31,-15);ctx.moveTo(4,15);ctx.lineTo(31,15);ctx.stroke();
+   ctx.fillStyle='#f1e6c6';ctx.strokeStyle='#09080e';ctx.lineWidth=2;
+   for(const yy of [-8,8]){
+     ctx.beginPath();ctx.moveTo(35,yy);ctx.lineTo(28,yy-4);ctx.lineTo(28,yy+4);ctx.closePath();ctx.fill();ctx.stroke();
+   }
+ }else if(t.kind==='tesla'||t.kind==='emp'){
+   // Animated coil rings around the emitter.
+   for(let z=0;z<3;z++){
+     ctx.strokeStyle=z===1?'#efffff':d.color;ctx.lineWidth=2.5;ctx.globalAlpha=.45+.18*z;
+     ctx.beginPath();ctx.ellipse(10+z*8,0,4,10+Math.sin(mechSpin+z)*2,0,0,Math.PI*2);ctx.stroke();
+   }
+   ctx.globalAlpha=1;
+ }else if(t.kind==='rail'||t.kind==='sniper'){
+   // Long magnetic rails and sight module.
+   ctx.strokeStyle=d.color;ctx.lineWidth=3;
+   ctx.beginPath();ctx.moveTo(8,-7);ctx.lineTo(49,-7);ctx.moveTo(8,7);ctx.lineTo(49,7);ctx.stroke();
+   ctx.fillStyle='#303641';ctx.strokeStyle='#09080e';ctx.lineWidth=2.5;
+   ctx.beginPath();ctx.roundRect(5,-17,19,7,3);ctx.fill();ctx.stroke();
+   ctx.fillStyle='#dffcff';ctx.beginPath();ctx.arc(20,-13.5,2.5,0,Math.PI*2);ctx.fill();
+ }else if(t.kind==='inferno'){
+   // Twin fuel tanks and pressure lines.
+   ctx.fillStyle='#7b4039';ctx.strokeStyle='#09080e';ctx.lineWidth=3;
+   for(const yy of [-14,14]){ctx.beginPath();ctx.roundRect(-12,yy-5,20,10,5);ctx.fill();ctx.stroke();}
+   ctx.strokeStyle='#ffbb65';ctx.lineWidth=2;
+   ctx.beginPath();ctx.moveTo(7,-14);ctx.quadraticCurveTo(19,-12,22,-7);ctx.moveTo(7,14);ctx.quadraticCurveTo(19,12,22,7);ctx.stroke();
+ }else if(t.kind==='cryo'){
+   // Frost canisters and cooling fins.
+   ctx.fillStyle='#bcefff';ctx.strokeStyle='#173342';ctx.lineWidth=2.5;ctx.globalAlpha=.85;
+   for(const yy of [-14,14]){ctx.beginPath();ctx.roundRect(-10,yy-5,18,10,5);ctx.fill();ctx.stroke();}
+   ctx.globalAlpha=1;ctx.strokeStyle='#dfffff';ctx.lineWidth=2;
+   for(let z=0;z<4;z++){ctx.beginPath();ctx.moveTo(8+z*7,-12);ctx.lineTo(8+z*7,12);ctx.stroke();}
+ }else if(t.kind==='gravity'||t.kind==='nova'){
+   // Counter-rotating energy rings.
+   ctx.save();ctx.translate(14,0);ctx.rotate(-mechSpin*.7);
+   ctx.strokeStyle='#f0e7ff';ctx.lineWidth=2;ctx.globalAlpha=.55;
+   ctx.beginPath();ctx.ellipse(0,0,21,7,0,0,Math.PI*2);ctx.stroke();
+   ctx.rotate(Math.PI/2);ctx.beginPath();ctx.ellipse(0,0,17,6,0,0,Math.PI*2);ctx.stroke();
+   ctx.restore();ctx.globalAlpha=1;
+ }else{
+   // General cannon: reinforced barrel jacket and muzzle collar.
+   ctx.strokeStyle='#9aa3ad';ctx.lineWidth=5;
+   ctx.beginPath();ctx.moveTo(18,-6);ctx.lineTo(37,-6);ctx.moveTo(18,6);ctx.lineTo(37,6);ctx.stroke();
+   ctx.fillStyle='#3b404b';ctx.strokeStyle='#09080e';ctx.lineWidth=3;
+   ctx.beginPath();ctx.roundRect(35,-10,10,20,4);ctx.fill();ctx.stroke();
+ }
+
+ // Higher-level towers gain extra mechanical mass, still purely visual.
+ if(lvl3>=4){
+   ctx.fillStyle='#555c69';ctx.strokeStyle='#09080e';ctx.lineWidth=3;
+   ctx.beginPath();ctx.roundRect(-19,-15,9,7,3);ctx.fill();ctx.stroke();
+   ctx.beginPath();ctx.roundRect(-19,8,9,7,3);ctx.fill();ctx.stroke();
+ }
+
  // PART 3/4 — tower firing personality, visual-only.
- if(firePulse>.72){
+ if(firePulse>.72 && (!('target' in t) || t.target)){
   const fp=(firePulse-.72)/.28;
   ctx.globalAlpha=.5+.45*fp;
   if(t.kind==='tesla'||t.kind==='emp'){
@@ -1061,9 +1195,10 @@ function drawTowerCartoon2(t,time,selected){
   }else if(t.kind==='mortar'){
    ctx.fillStyle='#fff1a5';ctx.beginPath();ctx.arc(29,0,5+fp*5,0,Math.PI*2);ctx.fill();
   }else{
-   ctx.fillStyle='#fff3b0';ctx.strokeStyle='#ffb45d';ctx.lineWidth=2;ctx.beginPath();
-   for(let z=0;z<10;z++){let a=z*Math.PI/5,r=z%2?5:11+fp*6,px=44+Math.cos(a)*r,py=Math.sin(a)*r;if(z===0)ctx.moveTo(px,py);else ctx.lineTo(px,py)}
-   ctx.closePath();ctx.fill();ctx.stroke();
+   // Upgrade 4 fix: no persistent star at the muzzle.
+   // Use a compact round flash that cannot look like a permanent star.
+   ctx.fillStyle='#fff3b0';ctx.strokeStyle='#ffb45d';ctx.lineWidth=2;
+   ctx.beginPath();ctx.arc(44,0,4+fp*4,0,Math.PI*2);ctx.fill();ctx.stroke();
   }
   ctx.globalAlpha=1;
  }
